@@ -1,0 +1,78 @@
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.env
+.venv
+venv/
+ENV/
+env/
+
+# ===============================
+# Jupyter Notebook
+# ===============================
+.ipynb_checkpoints/
+
+# ===============================
+# Data files (IMPORTANT)
+# ===============================
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.json
+
+# ===============================
+# Vector stores & embeddings
+# ===============================
+vector_store/
+*.faiss
+*.index
+
+# ===============================
+# Model & cache files
+# ===============================
+*.bin
+*.pt
+*.ckpt
+*.h5
+*.onnx
+.cache/
+huggingface/
+sentence_transformers/
+
+# ===============================
+# Logs & outputs
+# ===============================
+logs/
+*.log
+outputs/
+results/
+
+# ===============================
+# Images & media
+# ===============================
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.mp4
+
+# ===============================
+# OS / IDE
+# ===============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ===============================
+# CI artifacts
+# ===============================
+.coverage
+htmlcov/
