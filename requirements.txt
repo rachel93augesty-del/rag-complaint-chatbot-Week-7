@@ -1,3 +1,6 @@
+# =========================
+# Task 1 & 2 (existing)
+# =========================
 # Data manipulation
 pandas>=2.1.0
 numpy>=1.25.0
@@ -13,3 +16,20 @@ regex>=2023.10.10
 # Jupyter Notebook support
 jupyter>=1.0.0
 ipython>=8.16.0
+
+
+# =========================
+# Task 3 – RAG Pipeline
+# =========================
+langchain>=0.1.20
+langchain-community>=0.0.30
+chromadb>=0.4.24
+sentence-transformers>=2.6.0
+transformers>=4.38
+torch>=2.1
+pyarrow>=14.0
+tqdm>=4.66
+python-dotenv>=1.0
+
+# Testing
+pytest>=8.0
