@@ -13,3 +13,10 @@ regex>=2023.10.10
 # Jupyter Notebook support
 jupyter>=1.0.0
 ipython>=8.16.0
+
+# Task 4: Interactive Chat Interface
+gradio>=4.0.0
+streamlit>=1.28.0
+
+# Optional for enhanced UI/UX
+plotly>=5.17.0

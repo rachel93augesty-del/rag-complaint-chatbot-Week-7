@@ -1,14 +1,16 @@
-name: CI - Task 1 & Main
+name: CI - Task 1, Task 4 & Main
 
 on:
   push:
     branches:
       - main
       - task-1
+      - task-4
   pull_request:
     branches:
       - main
       - task-1
+      - task-4
 
 jobs:
   setup:
