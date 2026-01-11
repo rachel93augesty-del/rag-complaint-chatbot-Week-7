@@ -393,3 +393,34 @@ if __name__ == "__main__":
         
     else:
         print("❌ Failed to initialize pipeline")
+
+# Add this method to your existing Task3RAGPipeline class:
+
+def query(self, question: str, k: int = 5):
+    """
+    Task 4 interface method
+    Returns: (answer_text, [source1, source2, source3])
+    """
+    # Get result from your existing generate_answer method
+    result = self.generate_answer(question, k=k)
+    
+    # Extract sources from chunks
+    sources = []
+    for i, chunk in enumerate(result.get('chunks', [])[:3], 1):
+        text = chunk.get('text', '')
+        metadata = chunk.get('metadata', {})
+        
+        # Create formatted source string
+        source_text = f"**Source {i}**\n"
+        source_text += f"Product: {metadata.get('product_category', 'Unknown')}\n"
+        source_text += f"Issue: {metadata.get('issue', 'Unknown')}\n"
+        
+        # Truncate text for display
+        if len(text) > 150:
+            source_text += f"Excerpt: {text[:150]}..."
+        else:
+            source_text += f"Excerpt: {text}"
+        
+        sources.append(source_text)
+    
+    return result['answer'], sources
