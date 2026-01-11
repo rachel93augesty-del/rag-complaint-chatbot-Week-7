@@ -1,4 +1,12 @@
+task-4
 name: CI - All Tasks & Main
+
+task-3
+name: CI - Task 1, 2 & 3
+ main
+
+name: CI - Task 1, Task 2 & Main
+ main
 
 on:
   push:
@@ -6,11 +14,19 @@ on:
       - main
       - task-1
       - task-2
+ task-3
       - task-3
       - task-4
   pull_request:
     branches:
       - main
+
+  pull_request:
+    branches:
+      - main
+      - task-1
+      - task-2
+ main
 
 jobs:
   setup:
